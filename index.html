@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Esencial 21</title>
+  <link rel="icon" href="imagenes/logo.jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <h1>
+    <img src="imagenes/logo.jpeg" class="logo">
+    esencial21_
+  </h1>
+
+  <div class="topbar">
+    <input id="buscador" placeholder="Buscar..." oninput="filtrar()">
+    <span>🛒 <b id="contador">0</b></span>
+    <button onclick="enviarCarritoWhatsApp()" class="btn-whatsapp">Comprar carrito</button>
+  </div>
+</header>
+
+<section class="seccion">
+  <h2>Skincare</h2>
+  <div id="facial" class="productos"></div>
+</section>
+
+<section class="seccion">
+  <h2>Cuidado Capilar</h2>
+  <div id="capilar" class="productos"></div>
+</section>
+
+<section class="seccion">
+  <h2>Ofertas</h2>
+  <div id="ofertas" class="productos"></div>
+</section>
+
+<div class="panel-carrito">
+  <h3>Carrito</h3>
+  <ul id="lista-carrito"></ul>
+  <p>Total: $<span id="total">0</span></p>
+</div>
+
+<a href="#" onclick="abrirWhatsApp()" class="whatsapp-float">📲</a>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+
+    <div class="zoom-container">
+      <img id="modal-img">
+    </div>
+
+    <h2 id="modal-nombre"></h2>
+    <p id="modal-desc"></p>
+    <p id="modal-precio" class="precio"></p>
+
+    <button class="btn-whatsapp" onclick="comprarModal()">Comprar</button>
+  </div>
+</div>
+<section class="seccion instagram">
+  <h2>📸 Síguenos en Instagram</h2>
+
+  <div class="instagram-box">
+    <iframe 
+      src="https://www.instagram.com/esencial21_/embed"
+      width="100%" 
+      height="400"
+      frameborder="0">
+    </iframe>
+  </div>
+  <div class="video-instagram">
+  <iframe 
+    src="https://www.instagram.com/p/DXDmIaqDCVo/embed"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+<div class="video-instagram">
+  <iframe 
+    src="https://www.instagram.com/reel/DW-gzfwjHqD/embed"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+  <a href="https://www.instagram.com/esencial21_/" target="_blank" class="btn-instagram">
+    Ver perfil completo
+  </a>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
